@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/../css/gallerytemplate.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/minicart/3.0.5/minicart.min.js"></script>
+  <style media="screen">
+
+  .cart-form{
+    display: inline-block;
+  }
+  body{
+    background-attachment: fixed;
+    background-image: url("imgs/background2.png");
+    /*background-color: #747976;*/
+    background-size: 100% 150%;
+    background-repeat: no-repeat;
+  }
+
+
+  </style>
+
+  <body>
+    <script src="/../assets/js/minicart2.js"></script>
+    <!-- div for the top row containg the back arrow and add to cart button -->
+    <div class="toprow">
+      <a href="/../home.html" class="arrow">back 1 page :)<-----</a>
+
+      <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+      <input type="hidden" name="cmd" value="_cart">
+      <input type="hidden" name="business" value="mail@shelfshelf.store">
+      <input type="hidden" name="display" value="1">
+      <input type="submit" name="submit" value="look at your cart <3" class="cart_button">
+      </form>
+    </div>
+
+    <div class="gallery_container" style="">
+
+      <div class="wrapper">
+
+        <div class="gallery-item">
+          <a href="babyblue.html" target="_blank"><img src="imgs/beam_beanie/beam_front.jpg" class="gallery-img"></a>
+          <br>
+          <!-- <span>Baby Blue</span> -->
+          <span>35$</span>
+          <br>
+          <div class="cart-form">
+            <span>
+            <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input type="hidden" name="cmd" value="_cart">
+                <input type="hidden" name="business" value="tibbysalgado@gmail.com">
+                <input type="hidden" name="item_name" value="Beam Beanie">
+                <input type="hidden" name="amount" value="1">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="hidden" name="add" value="1">
+                <input type="submit" name="submit" value="Add to Cart" class="cart_button"style="color:green;">
+              </form>
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+      <script>
+        paypal.minicart.render();
+      </script>
+  </body>
+
+</html>
